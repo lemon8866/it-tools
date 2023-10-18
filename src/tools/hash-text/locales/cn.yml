@@ -1,0 +1,6 @@
+tools:
+  hash-text:
+    text: "需要哈希的文本"
+    input-text-placeholder: "请输入文本..."
+    digest-encoding: "哈希算法"
+

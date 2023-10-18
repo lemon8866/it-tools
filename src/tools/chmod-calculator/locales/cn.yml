@@ -1,0 +1,5 @@
+tools:
+  chmod-calculator:
+    owner: "拥有者"
+    group: "组"
+    public: "公共"

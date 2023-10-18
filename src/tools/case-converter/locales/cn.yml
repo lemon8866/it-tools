@@ -1,0 +1,15 @@
+tools:
+  case-converter:
+    lowercase: "小写字母"
+    uppercase: "大写字母"
+    camelcase: "驼峰"
+    capitalize: "首字母大写"
+    constantcase: "常量"
+    dotcase: "点分"
+    headercase: "标题"
+    nocase: "无分隔符"
+    paramcase: "参数"
+    pascalcase: "帕斯卡"
+    pathcase: "路径"
+    sentencecase: "句子"
+    snakecase: "下划线"

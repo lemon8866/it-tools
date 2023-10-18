@@ -19,58 +19,58 @@ const baseConfig = {
 };
 
 const input = ref('lorem ipsum dolor sit amet');
-
+const { t } = useI18n();
 const formats = computed(() => [
   {
-    label: 'Lowercase:',
+    label: t('tools.case-converter.lowercase'),
     value: noCase(input.value, baseConfig).toLocaleLowerCase(),
   },
   {
-    label: 'Uppercase:',
+    label: t('tools.case-converter.uppercase'),
     value: noCase(input.value, baseConfig).toLocaleUpperCase(),
   },
   {
-    label: 'Camelcase:',
+    label: t('tools.case-converter.camelcase'),
     value: camelCase(input.value, baseConfig),
   },
   {
-    label: 'Capitalcase:',
+    label: t('tools.case-converter.capitalize'),
     value: capitalCase(input.value, baseConfig),
   },
   {
-    label: 'Constantcase:',
+    label: t('tools.case-converter.constantcase'),
     value: constantCase(input.value, baseConfig),
   },
   {
-    label: 'Dotcase:',
+    label: t('tools.case-converter.dotcase'),
     value: dotCase(input.value, baseConfig),
   },
   {
-    label: 'Headercase:',
+    label: t('tools.case-converter.headercase'),
     value: headerCase(input.value, baseConfig),
   },
   {
-    label: 'Nocase:',
+    label: t('tools.case-converter.nocase'),
     value: noCase(input.value, baseConfig),
   },
   {
-    label: 'Paramcase:',
+    label: t('tools.case-converter.paramcase'),
     value: paramCase(input.value, baseConfig),
   },
   {
-    label: 'Pascalcase:',
+    label: t('tools.case-converter.pascalcase'),
     value: pascalCase(input.value, baseConfig),
   },
   {
-    label: 'Pathcase:',
+    label: t('tools.case-converter.pathcase'),
     value: pathCase(input.value, baseConfig),
   },
   {
-    label: 'Sentencecase:',
+    label: t('tools.case-converter.sentencecase'),
     value: sentenceCase(input.value, baseConfig),
   },
   {
-    label: 'Snakecase:',
+    label: t('tools.case-converter.snakecase'),
     value: snakeCase(input.value, baseConfig),
   },
 ]);
@@ -86,8 +86,8 @@ const inputLabelAlignmentConfig = {
   <c-card>
     <c-input-text
       v-model:value="input"
-      label="Your string:"
-      placeholder="Your string..."
+      :label="t('common.noun.string')"
+      :placeholder="t('common.noun.string')"
       raw-text
       v-bind="inputLabelAlignmentConfig"
     />

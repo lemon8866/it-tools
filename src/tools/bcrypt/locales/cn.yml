@@ -1,0 +1,11 @@
+tools:
+  bcrypt:
+    hash-placeholder: "要加密的字符串"
+    your-sting: "字符串"
+    salt-count: "加盐次数"
+    compare-string: "字符串和Hash的比较"
+    your-hash: "Hash"
+    do-match: "是否匹配"
+    copy-hash: "复制Hash"
+    clipboard-copy-success: "字符串已复制到剪切板"
+

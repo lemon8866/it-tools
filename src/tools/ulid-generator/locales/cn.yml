@@ -1,0 +1,4 @@
+tools:
+  uuid-generator:
+    quantity: "数量"
+    uuidquantity: "生成数量"

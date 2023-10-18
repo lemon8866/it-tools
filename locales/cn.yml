@@ -1,0 +1,31 @@
+home:
+  categories:
+    newestTools: 最新工具
+common:
+  clipboard:
+    success: "已复制到剪切板"
+  operate:
+    copy: "复制"
+    refresh: "刷新"
+    download: "下载"
+    pause: "暂停"
+    resume: "恢复"
+    stop: "停止"
+  noun:
+    quantity: "数量"
+    format: "格式"
+    encrypt: "加密"
+    decrypt: "解密"
+    encryptionalgorithm: "加密算法"
+    language: "语言"
+    string: "字符串"
+    secret: "秘钥"
+    bits: "位"
+    note: "备注"
+    score: "分数"
+    video: "视频"
+    audio: "音频"
+    
+    
+
+

@@ -8,15 +8,15 @@ const count = useStorage('uuid-generator:quantity', 1);
 const [uuids, refreshUUIDs] = computedRefreshable(() =>
   Array.from({ length: count.value }, () => generateUUID()).join('\n'),
 );
-
-const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' });
+const { t } = useI18n();
+const { copy } = useCopy({ source: uuids, text: t('common.clipboard.success') });
 </script>
 
 <template>
   <div>
     <div flex items-center justify-center gap-3>
-      Quantity :
-      <n-input-number v-model:value="count" :min="1" :max="50" placeholder="UUID quantity" />
+      {{ $t('tools.uuid-generator.quantity') }} :
+      <n-input-number v-model:value="count" :min="1" :max="50" :placeholder="t('tools.uuid-generator.uuidquantity')" />
     </div>
 
     <c-input-text
@@ -35,10 +35,10 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
 
     <div flex justify-center gap-3>
       <c-button autofocus @click="copy()">
-        Copy
+        {{ $t('common.operate.copy') }}
       </c-button>
       <c-button @click="refreshUUIDs">
-        Refresh
+        {{ $t('common.operate.refresh') }}
       </c-button>
     </div>
   </div>

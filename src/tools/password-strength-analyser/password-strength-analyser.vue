@@ -3,22 +3,22 @@ import { getPasswordCrackTimeEstimation } from './password-strength-analyser.ser
 
 const password = ref('');
 const crackTimeEstimation = computed(() => getPasswordCrackTimeEstimation({ password: password.value }));
-
+const { t } = useI18n();
 const details = computed(() => [
   {
-    label: 'Password length:',
+    label: t('tools.password-strength-analyser.passlength'),
     value: crackTimeEstimation.value.passwordLength,
   },
   {
-    label: 'Entropy:',
+    label: t('tools.password-strength-analyser.entropy'),
     value: Math.round(crackTimeEstimation.value.entropy * 100) / 100,
   },
   {
-    label: 'Character set size:',
+    label: t('tools.password-strength-analyser.character-set-size'),
     value: crackTimeEstimation.value.charsetLength,
   },
   {
-    label: 'Score:',
+    label: t('common.noun.score'),
     value: `${Math.round(crackTimeEstimation.value.score * 100)} / 100`,
   },
 ]);
@@ -38,7 +38,7 @@ const details = computed(() => [
 
     <c-card text-center>
       <div op-60>
-        Duration to crack this password with brute force
+        {{ $t('tools.password-strength-analyser.force-crack') }}
       </div>
       <div text-2xl data-test-id="crack-duration">
         {{ crackTimeEstimation.crackDurationFormatted }}
@@ -55,8 +55,8 @@ const details = computed(() => [
       </div>
     </c-card>
     <div op-70>
-      <span font-bold>Note: </span>
-      The computed strength is based on the time it would take to crack the password using a brute force approach, it does not take into account the possibility of a dictionary attack.
+      <span font-bold>{{ $t('common.noun.note') }}: </span>
+        {{ $t('tools.password-strength-analyser.note-text') }}
     </div>
   </div>
 </template>

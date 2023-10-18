@@ -1,0 +1,17 @@
+tools:
+  benchmark-builder:
+    position: "位置"
+    title: "标题"
+    size: "大小"
+    mean: "平均值"
+    variance: "方差"
+    suitename: "套件名称"
+    suitevalue: "套件值"
+    deletesuite: "删除套件"
+    addsuite: "添加套件"
+    resetsuite: "重置套件"
+    copymarkdown: "复制markdown表格"
+    copybulletlist: "复制项目符号"
+    setyoumean: "设置您自己的平均值"
+    deletevalue: "删除值"
+    addmeasure: "添加测量"

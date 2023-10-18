@@ -1,0 +1,7 @@
+tools:
+  bip39-generator:
+    entropy-length-error: "熵长度应>=16，<=32，并且是4的倍数"
+    entropy-format-error: "熵应为十六进制字符串"
+    invalid-mnemonic: "无效的助记词"
+    seed: "熵（种子）"
+    mnemonic: "助记词"

@@ -1,0 +1,9 @@
+tools:
+  base64-file-converter:
+    invalid-message: "无效的Base64字符"
+    base642file: "Base64转文件"
+    file2base64: "文件转Base64"
+    filebase64: "文件的Base64编码"
+    filedrag: "拖拽文件到此"
+    base64: "Base64编码字符"
+

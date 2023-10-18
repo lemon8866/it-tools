@@ -15,7 +15,7 @@ const suites = useStorage('benchmark-builder:suites', [
 const unit = useStorage('benchmark-builder:unit', '');
 
 const round = (v: number) => Math.round(v * 1000) / 1000;
-
+const { t } = useI18n();
 const results = computed(() => {
   return suites.value
     .map(({ data: dirtyData, title }) => {
@@ -48,14 +48,14 @@ const results = computed(() => {
     });
 });
 
-const { copy } = useCopy({ createToast: false });
+const { copy } = useCopy({ createToast: true, text: t('tools.bcrypt.clipboard-copy-success')});
 
 const header = {
-  position: 'Position',
-  title: 'Suite',
-  size: 'Samples',
-  mean: 'Mean',
-  variance: 'Variance',
+  position: t('tools.benchmark-builder.position'),
+  title: t('tools.benchmark-builder.title'),
+  size: t('tools.benchmark-builder.size'),
+  mean: t('tools.benchmark-builder.mean'),
+  variance: t('tools.benchmark-builder.variance'),
 };
 
 function copyAsMarkdown() {
@@ -86,13 +86,13 @@ function copyAsBulletList() {
           <c-input-text
             v-model:value="suite.title"
             label-position="left"
-            label="Suite name"
-            placeholder="Suite name..."
+            :label="t('tools.benchmark-builder.suitename')"
+            :placeholder="t('tools.benchmark-builder.suitename')"
             clearable
           />
 
           <n-divider />
-          <n-form-item label="Suite values" :show-feedback="false">
+          <n-form-item :label="t('tools.benchmark-builder.suitevalue')" :show-feedback="false">
             <DynamicValues v-model:values="suite.data" />
           </n-form-item>
         </c-card>
@@ -100,14 +100,14 @@ function copyAsBulletList() {
         <div flex justify-center>
           <c-button v-if="suites.length > 1" variant="text" @click="suites.splice(index, 1)">
             <n-icon :component="Trash" depth="3" mr-2 size="18" />
-            Delete suite
+             {{ $t('tools.benchmark-builder.deletesuite') }}
           </c-button>
           <c-button
             variant="text"
             @click="suites.splice(index + 1, 0, { data: [0], title: `Suite ${suites.length + 1}` })"
           >
             <n-icon :component="Plus" depth="3" mr-2 size="18" />
-            Add suite
+            {{ $t('tools.benchmark-builder.addsuite') }}
           </c-button>
         </div>
       </div>
@@ -127,7 +127,7 @@ function copyAsBulletList() {
             ]
           "
         >
-          Reset suites
+        {{ $t('tools.benchmark-builder.resetsuite') }}
         </c-button>
       </div>
 
@@ -135,10 +135,10 @@ function copyAsBulletList() {
 
       <div mt-5 flex justify-center gap-3>
         <c-button @click="copyAsMarkdown()">
-          Copy as markdown table
+          {{ $t('tools.benchmark-builder.copymarkdown') }}
         </c-button>
         <c-button @click="copyAsBulletList()">
-          Copy as bullet list
+          {{ $t('tools.benchmark-builder.copybulletlist') }}
         </c-button>
       </div>
     </div>

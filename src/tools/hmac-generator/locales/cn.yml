@@ -1,0 +1,9 @@
+tools:
+  hmac-generator:
+    plaintext-placeholder: "用于计算哈希的文本"
+    enter-secret: "请输入秘钥..."
+    digest-encoding: "哈希算法"
+    hash-function: "哈希函数"
+    output-encoding: "输出编码"
+    hmac-text: "HMAC文本"
+

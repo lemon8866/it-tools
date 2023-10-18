@@ -1,0 +1,9 @@
+tools:
+  encryption:
+    youtext: "文本"
+    strcypher: "待加密的字符串"
+    secretkey: "秘钥"
+    textencrypted: "加密后的文本"
+    encryptedtext: "加密的文本"
+    decryptedtext: "解密后的文本"
+

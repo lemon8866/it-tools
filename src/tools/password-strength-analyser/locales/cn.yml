@@ -1,0 +1,7 @@
+tools:
+  password-strength-analyser:
+    force-crack: "使用暴力破解此密码的持续时间"
+    note-text: "计算的强度是基于使用蛮力方法破解密码所需的时间，它没有考虑字典攻击的可能性。"
+    passlength: "密码长度"
+    entropy: "密码熵"
+    character-set-size: "字符集大小"

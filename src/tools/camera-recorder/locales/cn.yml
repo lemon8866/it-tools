@@ -1,0 +1,11 @@
+tools:
+  camera-recorder:
+    not-support-camera: "您的浏览器不支持从相机录制视频"
+    grant-permission-message: "您需要授予使用相机和麦克风的权限"
+    blocked-message: "您的浏览器已阻止或不支持权限请求。您需要在中手动授予权限您的浏览器设置（通常是地址栏中的锁定图标）。"
+    grant-permission: "授权"
+    select-camera: "选择相机"
+    select-microphone: "选择麦克风"
+    start-webcam: "开始录制"
+    takescreen: "截图"
+    not-support-video: "您的浏览器不支持视频录制"

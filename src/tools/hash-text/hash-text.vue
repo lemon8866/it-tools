@@ -16,7 +16,7 @@ const algos = {
   SHA3,
   RIPEMD160,
 } as const;
-
+const { t } = useI18n();
 type AlgoNames = keyof typeof algos;
 type Encoding = keyof typeof enc | 'Bin';
 const algoNames = Object.keys(algos) as AlgoNames[];
@@ -37,14 +37,14 @@ const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[al
 <template>
   <div>
     <c-card>
-      <c-input-text v-model:value="clearText" multiline raw-text placeholder="Your string to hash..." rows="3" autosize autofocus label="Your text to hash:" />
+      <c-input-text v-model:value="clearText" multiline raw-text :placeholder="t('tools.hash-text.input-text-placeholder')" rows="3" autosize autofocus :label="t('tools.hash-text.text')" />
 
       <n-divider />
 
       <c-select
         v-model:value="encoding"
         mb-4
-        label="Digest encoding"
+        :label="t('tools.hash-text.digest-encoding')"
         :options="[
           {
             label: 'Binary (base 2)',

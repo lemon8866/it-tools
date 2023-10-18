@@ -1,0 +1,12 @@
+tools:
+  base64-string-converter:
+    invalid-message: "无效的Base64字符"
+    base64: "Base64编码字符"
+    stringtobase64: "字符串转Base64编码"
+    base64tostring: "Base64编码转字符串"
+    enurlsafe: "URL编码"
+    deurlsafe: "URL解码"
+    base64decode: "Base64字符串解码"
+    decode: "字符串解码"
+    decoded: "解码结果"
+

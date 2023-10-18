@@ -1,0 +1,4 @@
+tools:
+  rsa-key-pair-generator:
+    bits-error: "位应为256<=位<=16384，并且是8的倍数"
+    refresh-key: "刷新密钥对"
