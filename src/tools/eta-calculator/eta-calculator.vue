@@ -26,20 +26,19 @@ const endAt = computed(() =>
 <template>
   <div>
     <div text-justify op-70>
-      With a concrete example, if you wash 3 plates in 5 minutes and you have 500 plates to wash, it will take you 5
-      hours and 10 minutes to wash them all.
+      举个具体的例子，如果你在5分钟内洗3个盘子，而你有500个盘子要洗，你需要5个小时10分钟将它们全部清洗干净。
     </div>
     <n-divider />
     <div flex gap-2>
-      <n-form-item label="Amount of element to consume" flex-1>
+      <n-form-item label="要消耗的元素数量" flex-1>
         <n-input-number v-model:value="unitCount" :min="1" />
       </n-form-item>
-      <n-form-item label="The consumption started at" flex-1>
+      <n-form-item label="消耗开始于" flex-1>
         <n-date-picker v-model:value="startedAt" type="datetime" />
       </n-form-item>
     </div>
 
-    <p>Amount of unit consumed by time span</p>
+    <p>按时间跨度消耗的单位数量</p>
     <div flex flex-col items-baseline gap-y-2 md:flex-row>
       <n-input-number v-model:value="unitPerTimeSpan" :min="1" />
       <div flex items-baseline gap-2>
@@ -49,11 +48,11 @@ const endAt = computed(() =>
           v-model:value="timeSpanUnitMultiplier"
           min-w-130px
           :options="[
-            { label: 'milliseconds', value: 1 },
-            { label: 'seconds', value: 1000 },
-            { label: 'minutes', value: 1000 * 60 },
-            { label: 'hours', value: 1000 * 60 * 60 },
-            { label: 'days', value: 1000 * 60 * 60 * 24 },
+            { label: '毫秒', value: 1 },
+            { label: '秒', value: 1000 },
+            { label: '分钟', value: 1000 * 60 },
+            { label: '小时', value: 1000 * 60 * 60 },
+            { label: '天', value: 1000 * 60 * 60 * 24 },
           ]"
         />
       </div>
@@ -61,12 +60,12 @@ const endAt = computed(() =>
 
     <n-divider />
     <c-card mb-2>
-      <n-statistic label="Total duration">
+      <n-statistic label="总持续时间">
         {{ formatMsDuration(durationMs) }}
       </n-statistic>
     </c-card>
     <c-card>
-      <n-statistic label="It will end ">
+      <n-statistic label="它将结束 ">
         {{ endAt }}
       </n-statistic>
     </c-card>

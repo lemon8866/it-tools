@@ -1,7 +1,7 @@
 import type { OGSchemaType } from '../OGSchemaType.type';
 
 export const image: OGSchemaType = {
-  name: 'Image',
+  name: '图片',
   elements: [
     {
       type: 'input',

@@ -34,10 +34,10 @@ const error = computed(() =>
 <template>
   <div>
     <c-card>
-      <c-input-text v-model:value="input" label="Input number" placeholder="Put your number here (ex: 42)" label-position="left" label-width="110px" mb-2 label-align="right" />
+      <c-input-text v-model:value="input" label="输入数字" placeholder="把你的数字放在这里（例如：42）" label-position="left" label-width="110px" mb-2 label-align="right" />
 
-      <n-form-item label="Input base" label-placement="left" label-width="110" :show-feedback="false">
-        <n-input-number v-model:value="inputBase" max="64" min="2" placeholder="Put your input base here (ex: 10)" w-full />
+      <n-form-item label="输入基数" label-placement="left" label-width="110" :show-feedback="false">
+        <n-input-number v-model:value="inputBase" max="64" min="2" placeholder="把你的输入基数放在这里（例如：10）" w-full />
       </n-form-item>
 
       <n-alert v-if="error" style="margin-top: 25px" type="error">

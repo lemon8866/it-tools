@@ -16,7 +16,6 @@ const emojis = _.map(emojiUnicodeData, (emojiInfo, emoji) => ({
   codePoints: getEmojiCodePoints({ emoji }),
   unicode: escapeUnicode({ emoji }),
 }));
-
 const emojisGroups: { emojiInfos: EmojiInfo[]; group: string }[] = _
   .chain(emojis)
   .groupBy('group')
@@ -42,7 +41,7 @@ const { searchResult } = useFuzzySearch({
     <div flex items-center gap-3>
       <c-input-text
         v-model:value="searchQuery"
-        placeholder="Search emojis (e.g. 'smile')..."
+        placeholder="搜索 emojis (e.g. 'smile')..."
         mx-auto max-w-600px
       >
         <template #prefix>
@@ -58,12 +57,12 @@ const { searchResult } = useFuzzySearch({
         text-20px
         font-bold
       >
-        No results
+        没有结果
       </div>
 
       <div v-else>
         <div mt-4 text-20px font-bold>
-          Search result
+          搜索结果
         </div>
 
         <emoji-grid :emoji-infos="searchResult" />

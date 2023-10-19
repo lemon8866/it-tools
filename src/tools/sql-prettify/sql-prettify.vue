@@ -23,7 +23,7 @@ const prettySQL = computed(() => formatSQL(rawSQL.value, config));
       <c-select
         v-model:value="config.language"
         flex-1
-        label="Dialect"
+        label="方言"
         :options="[
           { label: 'GCP BigQuery', value: 'bigquery' },
           { label: 'IBM DB2', value: 'db2' },
@@ -41,31 +41,31 @@ const prettySQL = computed(() => formatSQL(rawSQL.value, config));
         ]"
       />
       <c-select
-        v-model:value="config.keywordCase" label="Keyword case"
+        v-model:value="config.keywordCase" label="关键字大小写"
         flex-1
         :options="[
-          { label: 'UPPERCASE', value: 'upper' },
-          { label: 'lowercase', value: 'lower' },
-          { label: 'Preserve', value: 'preserve' },
+          { label: '大写', value: 'upper' },
+          { label: '小写', value: 'lower' },
+          { label: '保持', value: 'preserve' },
         ]"
       />
       <c-select
-        v-model:value="config.indentStyle" label="Indent style"
+        v-model:value="config.indentStyle" label="缩进风格"
         flex-1
         :options="[
-          { label: 'Standard', value: 'standard' },
-          { label: 'Tabular left', value: 'tabularLeft' },
-          { label: 'Tabular right', value: 'tabularRight' },
+          { label: '标准', value: 'standard' },
+          { label: '左侧表格', value: 'tabularLeft' },
+          { label: '右侧表格', value: 'tabularRight' },
         ]"
       />
     </div>
   </div>
 
-  <n-form-item label="Your SQL query">
+  <n-form-item label="您的SQL查询">
     <c-input-text
       ref="inputElement"
       v-model:value="rawSQL"
-      placeholder="Put your SQL query here..."
+      placeholder="将您的SQL查询放在此处..."
       rows="20"
       multiline
       autocomplete="off"
@@ -75,7 +75,7 @@ const prettySQL = computed(() => formatSQL(rawSQL.value, config));
       monospace
     />
   </n-form-item>
-  <n-form-item label="Prettify version of your query">
+  <n-form-item label="您查询的优化结果">
     <TextareaCopyable :value="prettySQL" language="sql" :follow-height-of="inputElement" />
   </n-form-item>
 </template>

@@ -19,7 +19,7 @@ const userAgentInfo = computed(() => withDefaultOnError(() => getUserAgentInfo(u
 
 const sections: UserAgentResultSection[] = [
   {
-    heading: 'Browser',
+    heading: '浏览器',
     icon: Browser,
     content: [
       {
@@ -105,9 +105,9 @@ const sections: UserAgentResultSection[] = [
   <div>
     <c-input-text
       v-model:value="ua"
-      label="User agent string"
+      label="用户代理字符串"
       multiline
-      placeholder="Put your user-agent here..."
+      placeholder="将您的用户代理放在此处..."
       clearable
       raw-text
       rows="2"

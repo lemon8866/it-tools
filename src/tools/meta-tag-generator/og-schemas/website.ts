@@ -30,11 +30,11 @@ const typeOptions = [
 ];
 
 export const website: OGSchemaType = {
-  name: 'General information',
+  name: '一般信息',
   elements: [
     {
       type: 'select',
-      label: 'Page type',
+      label: '页面类型',
       placeholder: 'Select the type of your website...',
       key: 'type',
       options: typeOptions,

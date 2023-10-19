@@ -20,31 +20,31 @@ const cronstrueConfig = reactive({
 const helpers = [
   {
     symbol: '*',
-    meaning: 'Any value',
+    meaning: '任意值',
     example: '* * * *',
-    equivalent: 'Every minute',
+    equivalent: '每分钟',
   },
   {
     symbol: '-',
-    meaning: 'Range of values',
+    meaning: '值的范围',
     example: '1-10 * * *',
-    equivalent: 'Minutes 1 through 10',
+    equivalent: '第1分钟到第10分钟',
   },
   {
     symbol: ',',
-    meaning: 'List of values',
+    meaning: '值列表',
     example: '1,10 * * *',
-    equivalent: 'At minutes 1 and 10',
+    equivalent: '第 1 分钟和第 10 分钟',
   },
   {
     symbol: '/',
-    meaning: 'Step values',
+    meaning: '步长值',
     example: '*/10 * * *',
-    equivalent: 'Every 10 minutes',
+    equivalent: '每10分钟一班',
   },
   {
     symbol: '@yearly',
-    meaning: 'Once every year at midnight of 1 January',
+    meaning: '每年1月1日午夜一次',
     example: '@yearly',
     equivalent: '0 0 1 1 *',
   },
@@ -102,7 +102,7 @@ const cronString = computed(() => {
 const cronValidationRules = [
   {
     validator: (value: string) => isCronValid(value),
-    message: 'This cron is invalid',
+    message: '该 cron 无效',
   },
 ];
 </script>
@@ -127,13 +127,13 @@ const cronValidationRules = [
 
     <div flex justify-center>
       <n-form :show-feedback="false" label-width="170" label-placement="left">
-        <n-form-item label="Verbose">
+        <n-form-item label="冗长">
           <n-switch v-model:value="cronstrueConfig.verbose" />
         </n-form-item>
-        <n-form-item label="Use 24 hour time format">
+        <n-form-item label="使用 24 小时时间格式">
           <n-switch v-model:value="cronstrueConfig.use24HourTimeFormat" />
         </n-form-item>
-        <n-form-item label="Days start at 0">
+        <n-form-item label="天数从 0 开始">
           <n-switch v-model:value="cronstrueConfig.dayOfWeekStartIndexZero" />
         </n-form-item>
       </n-form>
@@ -141,12 +141,12 @@ const cronValidationRules = [
   </c-card>
   <c-card>
     <pre>
-┌──────────── [optional] seconds (0 - 59)
-| ┌────────── minute (0 - 59)
-| | ┌──────── hour (0 - 23)
-| | | ┌────── day of month (1 - 31)
-| | | | ┌──── month (1 - 12) OR jan,feb,mar,apr ...
-| | | | | ┌── day of week (0 - 6, sunday=0) OR sun,mon ...
+┌──────────── [可选] 秒 (0 - 59)
+| ┌────────── 分钟 (0 - 59)
+| | ┌──────── 小时 (0 - 23)
+| | | ┌────── 一个月中的天数 (1 - 31)
+| | | | ┌──── 月 (1 - 12) 或一月、二月、三月、四月...
+| | | | | ┌── 星期几（0 - 6，星期日=0）或星期日、星期一 ...
 | | | | | |
 * * * * * * command</pre>
 

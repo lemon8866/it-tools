@@ -36,19 +36,19 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
           multiline
           rows="1"
           autosize
-          placeholder="Your link or text..."
+          placeholder="链接或文本..."
           mb-6
         />
         <n-form label-width="130" label-placement="left">
-          <n-form-item label="Foreground color:">
+          <n-form-item label="前景颜色:">
             <n-color-picker v-model:value="foreground" :modes="['hex']" />
           </n-form-item>
-          <n-form-item label="Background color:">
+          <n-form-item label="背景颜色:">
             <n-color-picker v-model:value="background" :modes="['hex']" />
           </n-form-item>
           <c-select
             v-model:value="errorCorrectionLevel"
-            label="Error resistance:"
+            label="抗误差性:"
             label-position="left"
             label-width="130px"
             label-align="right"
@@ -60,7 +60,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
         <div flex flex-col items-center gap-3>
           <n-image :src="qrcode" width="200" />
           <c-button @click="download">
-            Download qr-code
+            下载 qr-code
           </c-button>
         </div>
       </n-gi>

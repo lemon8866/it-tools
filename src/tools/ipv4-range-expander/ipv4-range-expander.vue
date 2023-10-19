@@ -17,17 +17,17 @@ const calculatedValues: {
   getNewValue: (result: Ipv4RangeExpanderResult | undefined) => string | undefined
 }[] = [
   {
-    label: 'Start address',
+    label: '开始地址',
     getOldValue: () => rawStartAddress.value,
     getNewValue: result => result?.newStart,
   },
   {
-    label: 'End address',
+    label: '结束地址',
     getOldValue: () => rawEndAddress.value,
     getNewValue: result => result?.newEnd,
   },
   {
-    label: 'Addresses in range',
+    label: '范围内的地址',
     getOldValue: result => result?.oldSize?.toLocaleString(),
     getNewValue: result => result?.newSize?.toLocaleString(),
   },
@@ -40,11 +40,11 @@ const calculatedValues: {
 
 const startIpValidation = useValidation({
   source: rawStartAddress,
-  rules: [{ message: 'Invalid ipv4 address', validator: ip => isValidIpv4({ ip }) }],
+  rules: [{ message: '无效的ipv4地址', validator: ip => isValidIpv4({ ip }) }],
 });
 const endIpValidation = useValidation({
   source: rawEndAddress,
-  rules: [{ message: 'Invalid ipv4 address', validator: ip => isValidIpv4({ ip }) }],
+  rules: [{ message: '无效的ipv4地址', validator: ip => isValidIpv4({ ip }) }],
 });
 
 const showResult = computed(() => endIpValidation.isValid && startIpValidation.isValid && result.value !== undefined);
@@ -61,16 +61,16 @@ function onSwitchStartEndClicked() {
     <div mb-4 flex gap-4>
       <c-input-text
         v-model:value="rawStartAddress"
-        label="Start address"
-        placeholder="Start IPv4 address..."
+        label="开始地址"
+        placeholder="开始地址"
         :validation="startIpValidation"
         clearable
       />
 
       <c-input-text
         v-model:value="rawEndAddress"
-        label="End address"
-        placeholder="End IPv4 address..."
+        label="结束地址"
+        placeholder="结束地址"
         :validation="endIpValidation"
         clearable
       />
@@ -83,10 +83,10 @@ function onSwitchStartEndClicked() {
 &nbsp;
           </th>
           <th scope="col">
-            old value
+            旧值
           </th>
           <th scope="col">
-            new value
+            新值
           </th>
         </tr>
       </thead>
@@ -102,17 +102,16 @@ function onSwitchStartEndClicked() {
     </n-table>
     <n-alert
       v-else-if="startIpValidation.isValid && endIpValidation.isValid"
-      title="Invalid combination of start and end IPv4 address"
+      title="起始IPv4地址和结束IPv4地址的组合无效"
       type="error"
     >
       <div my-3 op-70>
-        The end IPv4 address is lower than the start IPv4 address. This is not valid and no result could be calculated.
-        In the most cases the solution to solve this problem is to change start and end address.
+        结束IPv4地址低于开始IPv4地址。这是无效的，无法计算任何结果。在大多数情况下，解决此问题的方法是更改起始地址和结束地址。
       </div>
 
       <c-button @click="onSwitchStartEndClicked">
         <n-icon mr-2 :component="Exchange" depth="3" size="22" />
-        Switch start and end IPv4 address
+        交换机起始和结束IPv4地址
       </c-button>
     </n-alert>
   </div>

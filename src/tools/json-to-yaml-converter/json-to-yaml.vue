@@ -17,7 +17,7 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    input-label="Your JSON"
+    input-label="json字符串"
     input-placeholder="Paste your JSON here..."
     output-label="YAML from your JSON"
     output-language="yaml"

@@ -2,9 +2,9 @@ import { AlignJustified } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'YAML to TOML',
+  name: 'YAML至TOML',
   path: '/yaml-to-toml',
-  description: 'Parse and convert YAML to TOML.',
+  description: '解析并将YAML转换为TOML。',
   keywords: ['yaml', 'to', 'toml', 'convert', 'transform'],
   component: () => import('./yaml-to-toml.vue'),
   icon: AlignJustified,

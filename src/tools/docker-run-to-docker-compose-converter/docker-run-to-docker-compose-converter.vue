@@ -47,12 +47,12 @@ const { download } = useDownloadFileFromBase64({ source: dockerComposeBase64, fi
 
     <div mt-5 flex justify-center>
       <c-button :disabled="dockerCompose === ''" secondary @click="download">
-        Download docker-compose.yml
+        下载 docker-compose.yml
       </c-button>
     </div>
 
     <div v-if="notComposable.length > 0">
-      <n-alert title="This options are not translatable to docker-compose" type="info" mt-5>
+      <n-alert title="此选项不可翻译为docker compose" type="info" mt-5>
         <ul>
           <li v-for="(message, index) of notComposable" :key="index">
             {{ message }}
@@ -63,7 +63,7 @@ const { download } = useDownloadFileFromBase64({ source: dockerComposeBase64, fi
 
     <div v-if="notImplemented.length > 0">
       <n-alert
-        title="This options are not yet implemented and therefore haven't been translated to docker-compose"
+        title="此选项尚未实现，因此尚未转换为docker compose"
         type="warning"
         mt-5
       >
@@ -76,7 +76,7 @@ const { download } = useDownloadFileFromBase64({ source: dockerComposeBase64, fi
     </div>
 
     <div v-if="errors.length > 0">
-      <n-alert title="The following errors occured" type="error" mt-5>
+      <n-alert title="出现以下错误" type="error" mt-5>
         <ul>
           <li v-for="(message, index) of errors" :key="index">
             {{ message }}

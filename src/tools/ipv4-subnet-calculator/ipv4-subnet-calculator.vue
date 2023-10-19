@@ -15,7 +15,7 @@ const networkInfo = computed(() => withDefaultOnError(() => getNetworkInfo(ip.va
 
 const ipValidationRules = [
   {
-    message: 'We cannot parse this address, check the format',
+    message: '我们无法解析此地址，请检查格式',
     validator: (value: string) => isNotThrowing(() => getNetworkInfo(value.trim())),
   },
 ];
@@ -26,50 +26,50 @@ const sections: {
   undefinedFallback?: string
 }[] = [
   {
-    label: 'Netmask',
+    label: '子网掩码',
     getValue: block => block.toString(),
   },
   {
-    label: 'Network address',
+    label: '网络地址',
     getValue: ({ base }) => base,
   },
   {
-    label: 'Network mask',
+    label: '网络掩码',
     getValue: ({ mask }) => mask,
   },
   {
-    label: 'Network mask in binary',
+    label: '二进制网络掩码',
     getValue: ({ bitmask }) => ('1'.repeat(bitmask) + '0'.repeat(32 - bitmask)).match(/.{8}/g)?.join('.') ?? '',
   },
   {
-    label: 'CIDR notation',
+    label: 'CIDR 符号',
     getValue: ({ bitmask }) => `/${bitmask}`,
   },
   {
-    label: 'Wildcard mask',
+    label: '反掩码',
     getValue: ({ hostmask }) => hostmask,
   },
   {
-    label: 'Network size',
+    label: '网络规模',
     getValue: ({ size }) => String(size),
   },
   {
-    label: 'First address',
+    label: '第一个地址',
     getValue: ({ first }) => first,
   },
   {
-    label: 'Last address',
+    label: '最后地址',
     getValue: ({ last }) => last,
   },
   {
-    label: 'Broadcast address',
+    label: '广播地址',
     getValue: ({ broadcast }) => broadcast,
-    undefinedFallback: 'No broadcast address with this mask',
+    undefinedFallback: '没有带有此掩码的广播地址',
   },
   {
-    label: 'IP class',
+    label: 'IP类',
     getValue: ({ base: ip }) => getIPClass({ ip }),
-    undefinedFallback: 'Unknown class type',
+    undefinedFallback: '未知类类型',
   },
 ];
 
@@ -86,8 +86,8 @@ function switchToBlock({ count = 1 }: { count?: number }) {
   <div>
     <c-input-text
       v-model:value="ip"
-      label="An IPv4 address with or without mask"
-      placeholder="The ipv4 address..."
+      label="带或不带掩码的IPv4地址"
+      placeholder="ipv4地址...."
       :validation-rules="ipValidationRules"
       mb-4
     />
@@ -112,10 +112,10 @@ function switchToBlock({ count = 1 }: { count?: number }) {
       <div mt-3 flex items-center justify-between>
         <c-button @click="switchToBlock({ count: -1 })">
           <n-icon :component="ArrowLeft" />
-          Previous block
+          上一个块
         </c-button>
         <c-button @click="switchToBlock({ count: 1 })">
-          Next block
+          下一块
           <n-icon :component="ArrowRight" />
         </c-button>
       </div>

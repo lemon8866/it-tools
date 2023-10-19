@@ -59,7 +59,7 @@ const fields = computed(() => {
         {{ event.key }}
       </div>
       <span lh-1 op-70>
-        Press the key on your keyboard you want to get info about this key
+        按下键盘上的键，您想获得有关该键的信息
       </span>
     </c-card>
 

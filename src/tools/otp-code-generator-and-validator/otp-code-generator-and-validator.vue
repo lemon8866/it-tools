@@ -41,11 +41,11 @@ const { qrcode } = useQRCode({
 
 const secretValidationRules = [
   {
-    message: 'Secret should be a base32 string',
+    message: 'Secret应为base32字符串',
     validator: (value: string) => value.toUpperCase().match(/^[A-Z234567]+$/),
   },
   {
-    message: 'Please set a secret',
+    message: '请设置一个 secret',
     validator: (value: string) => value !== '',
   },
 ];
@@ -56,12 +56,12 @@ const secretValidationRules = [
     <c-input-text
       v-model:value="secret"
       label="Secret"
-      placeholder="Paste your TOTP secret..."
+      placeholder="粘贴您的TOTP secret..."
       mb-5
       :validation-rules="secretValidationRules"
     >
       <template #suffix>
-        <c-tooltip tooltip="Generate a new random secret">
+        <c-tooltip tooltip="生成一个新的 random secret">
           <c-button circle variant="text" size="small" @click="refreshSecret">
             <icon-mdi-refresh />
           </c-button>
@@ -74,19 +74,19 @@ const secretValidationRules = [
 
       <n-progress :percentage="(100 * interval) / 30" :color="theme.primaryColor" :show-indicator="false" />
       <div style="text-align: center">
-        Next in {{ String(Math.floor(30 - interval)).padStart(2, '0') }}s
+        下一个 {{ String(Math.floor(30 - interval)).padStart(2, '0') }}s
       </div>
     </div>
     <div mt-4 flex flex-col items-center justify-center gap-3>
       <n-image :src="qrcode" />
       <c-button :href="keyUri" target="_blank">
-        Open Key URI in new tab
+        打开 Key URI 在新选项卡
       </c-button>
     </div>
   </div>
   <div style="max-width: 350px">
     <InputCopyable
-      label="Secret in hexadecimal"
+      label="Secret 以十六进制表示"
       :value="base32toHex(secret)"
       readonly
       placeholder="Secret in hex will be displayed here"
@@ -98,10 +98,10 @@ const secretValidationRules = [
       :value="Math.floor(now / 1000).toString()"
       readonly
       mb-5
-      placeholder="Epoch in sec will be displayed here"
+      placeholder="此处将显示以秒为单位的Epoch"
     />
 
-    <p>Iteration</p>
+    <p>迭代</p>
 
     <InputCopyable
       :value="String(getCounterFromTime({ now, timeStep: 30 }))"

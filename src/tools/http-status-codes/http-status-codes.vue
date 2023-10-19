@@ -17,7 +17,7 @@ const codesByCategoryFiltered = computed(() => {
     return codesByCategories;
   }
 
-  return [{ category: 'Search results', codes: searchResult.value }];
+  return [{ category: '搜索结果', codes: searchResult.value }];
 });
 </script>
 
@@ -25,7 +25,7 @@ const codesByCategoryFiltered = computed(() => {
   <div>
     <c-input-text
       v-model:value="search"
-      placeholder="Search http status..."
+      placeholder="搜索状态码..."
       autofocus raw-text mb-10
     />
 

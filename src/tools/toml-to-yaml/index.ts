@@ -2,9 +2,9 @@ import { defineTool } from '../tool';
 import BracketIcon from '~icons/mdi/code-brackets';
 
 export const tool = defineTool({
-  name: 'TOML to YAML',
+  name: 'TOML至YAML',
   path: '/toml-to-yaml',
-  description: 'Parse and convert TOML to YAML.',
+  description: '解析TOML并将其转换为YAML。',
   keywords: ['toml', 'yaml', 'convert', 'online', 'transform', 'parse'],
   component: () => import('./toml-to-yaml.vue'),
   icon: BracketIcon,

@@ -30,10 +30,10 @@ const { copy } = useCopy();
       </div> -->
 
       <div flex gap-2 text-xs font-mono op-70>
-        <span cursor-pointer transition hover:text-primary @click="copy(emojiInfo.codePoints, { notificationMessage: `Code points '${emojiInfo.codePoints}' copied to the clipboard` })">
+        <span cursor-pointer transition hover:text-primary @click="copy(emojiInfo.codePoints, { notificationMessage: `Code points '${emojiInfo.codePoints}' 复制到剪切板` })">
           {{ emojiInfo.codePoints }}
         </span>
-        <span cursor-pointer truncate transition hover:text-primary @click="copy(emojiInfo.unicode, { notificationMessage: `Unicode '${emojiInfo.unicode}' copied to the clipboard` })">
+        <span cursor-pointer truncate transition hover:text-primary @click="copy(emojiInfo.unicode, { notificationMessage: `Unicode '${emojiInfo.unicode}' 复制到剪切板` })">
           {{ emojiInfo.unicode }}
         </span>
       </div>

@@ -18,11 +18,11 @@ const calculatedSections = computed(() => {
       value: `${ula}::/48`,
     },
     {
-      label: 'First routable block:',
+      label: '第一个可路由区块:',
       value: `${ula}:0::/64`,
     },
     {
-      label: 'Last routable block:',
+      label: '最后一个可路由块:',
       value: `${ula}:ffff::/64`,
     },
   ];
@@ -34,15 +34,14 @@ const addressValidation = macAddressValidation(macAddress);
 <template>
   <div>
     <n-alert title="Info" type="info">
-      This tool uses the first method suggested by IETF using the current timestamp plus the mac address, sha1 hashed,
-      and the lower 40 bits to generate your random ULA.
+      该工具使用IETF建议的使用当前时间戳加上mac地址sha1散列的第一种方法，以及较低的40位来生成您的随机ULA。
     </n-alert>
 
     <c-input-text
       v-model:value="macAddress"
-      placeholder="Type a MAC address"
+      placeholder="键入MAC地址"
       clearable
-      label="MAC address:"
+      label="MAC 地址:"
       raw-text
       my-8
       :validation="addressValidation"

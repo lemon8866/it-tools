@@ -22,7 +22,7 @@ const validation = useValidation({
   rules: [
     {
       validator: value => value.length > 0 && isNotThrowing(() => decodeJwt({ jwt: rawJwt.value })),
-      message: 'Invalid JWT',
+      message: '无效 JWT',
     },
   ],
 });
@@ -30,7 +30,7 @@ const validation = useValidation({
 
 <template>
   <c-card>
-    <c-input-text v-model:value="rawJwt" label="JWT to decode" :validation="validation" placeholder="Put your token here..." rows="5" multiline raw-text autofocus mb-3 />
+    <c-input-text v-model:value="rawJwt" label="JWT解码" :validation="validation" placeholder="输入你的jwt token" rows="5" multiline raw-text autofocus mb-3 />
 
     <n-table v-if="validation.isValid">
       <tbody>

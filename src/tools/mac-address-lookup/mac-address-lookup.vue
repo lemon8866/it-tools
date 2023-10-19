@@ -8,7 +8,7 @@ const getVendorValue = (address: string) => address.trim().replace(/[.:-]/g, '')
 const macAddress = ref('20:37:06:12:34:56');
 const details = computed<string | undefined>(() => db[getVendorValue(macAddress.value)]);
 
-const { copy } = useCopy({ source: () => details.value ?? '', text: 'Vendor info copied to the clipboard' });
+const { copy } = useCopy({ source: () => details.value ?? '', text: '供应商信息已复制到剪贴板' });
 </script>
 
 <template>
@@ -17,7 +17,7 @@ const { copy } = useCopy({ source: () => details.value ?? '', text: 'Vendor info
       v-model:value="macAddress"
       label="MAC address:"
       size="large"
-      placeholder="Type a MAC address"
+      placeholder="键入MAC地址"
       clearable
       autocomplete="off"
       autocorrect="off"
@@ -28,7 +28,7 @@ const { copy } = useCopy({ source: () => details.value ?? '', text: 'Vendor info
     />
 
     <div mb-5px>
-      Vendor info:
+      供应商信息:
     </div>
     <c-card mb-5>
       <div v-if="details">
@@ -38,13 +38,13 @@ const { copy } = useCopy({ source: () => details.value ?? '', text: 'Vendor info
       </div>
 
       <div v-else italic op-60>
-        Unknown vendor for this address
+        此地址的未知供应商
       </div>
     </c-card>
 
     <div flex justify-center>
       <c-button :disabled="!details" @click="copy()">
-        Copy vendor info
+        复制供应商信息
       </c-button>
     </div>
   </div>

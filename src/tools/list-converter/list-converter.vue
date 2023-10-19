@@ -5,12 +5,12 @@ import type { ConvertOptions } from './list-converter.types';
 
 const sortOrderOptions = [
   {
-    label: 'Sort ascending',
+    label: '升序排序',
     value: 'asc',
     disabled: false,
   },
   {
-    label: 'Sort descending',
+    label: '降序排序',
     value: 'desc',
     disabled: false,
   },
@@ -41,14 +41,14 @@ function transformer(value: string) {
       <c-card>
         <div flex>
           <div>
-            <n-form-item label="Trim list items" label-placement="left" label-width="150" :show-feedback="false" mb-2>
+            <n-form-item label="修剪列表项" label-placement="left" label-width="150" :show-feedback="false" mb-2>
               <n-switch v-model:value="conversionConfig.trimItems" />
             </n-form-item>
-            <n-form-item label="Remove duplicates" label-placement="left" label-width="150" :show-feedback="false" mb-2>
+            <n-form-item label="删除重复项" label-placement="left" label-width="150" :show-feedback="false" mb-2>
               <n-switch v-model:value="conversionConfig.removeDuplicates" data-test-id="removeDuplicates" />
             </n-form-item>
             <n-form-item
-              label="Convert to lowercase"
+              label="转换为小写"
               label-placement="left"
               label-width="150"
               :show-feedback="false"
@@ -56,14 +56,14 @@ function transformer(value: string) {
             >
               <n-switch v-model:value="conversionConfig.lowerCase" />
             </n-form-item>
-            <n-form-item label="Keep line breaks" label-placement="left" label-width="150" :show-feedback="false" mb-2>
+            <n-form-item label="保留换行符" label-placement="left" label-width="150" :show-feedback="false" mb-2>
               <n-switch v-model:value="conversionConfig.keepLineBreaks" />
             </n-form-item>
           </div>
           <div flex-1>
             <c-select
               v-model:value="conversionConfig.sortList"
-              label="Sort list"
+              label="排序"
               label-position="left"
               label-width="120px"
               label-align="right"
@@ -77,7 +77,7 @@ function transformer(value: string) {
 
             <c-input-text
               v-model:value="conversionConfig.separator"
-              label="Separator"
+              label="分割符"
               label-position="left"
               label-width="120px"
               label-align="right"
@@ -115,9 +115,9 @@ function transformer(value: string) {
     </div>
   </div>
   <format-transformer
-    input-label="Your input data"
-    input-placeholder="Paste your input data here..."
-    output-label="Your transformed data"
+    input-label="输入字符串"
+    input-placeholder="转换结果"
+    output-label="转换结果"
     :transformer="transformer"
   />
 </template>
