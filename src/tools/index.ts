@@ -75,11 +75,11 @@ import { tool as xmlFormatter } from './xml-formatter';
 
 export const toolsByCategory: ToolCategory[] = [
   {
-    name: 'Crypto',
+    name: '加密类',
     components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser],
   },
   {
-    name: 'Converter',
+    name: '转换类',
     components: [
       dateTimeConverter,
       baseConverter,
@@ -100,7 +100,7 @@ export const toolsByCategory: ToolCategory[] = [
     ],
   },
   {
-    name: 'Web',
+    name: '网页类',
     components: [
       urlEncoder,
       htmlEntities,
@@ -120,11 +120,11 @@ export const toolsByCategory: ToolCategory[] = [
     ],
   },
   {
-    name: 'Images and videos',
+    name: '图片和视频',
     components: [qrCodeGenerator, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
   },
   {
-    name: 'Development',
+    name: '开发类',
     components: [
       gitMemo,
       randomPortGenerator,
@@ -139,23 +139,23 @@ export const toolsByCategory: ToolCategory[] = [
     ],
   },
   {
-    name: 'Network',
+    name: '网络',
     components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, ipv6UlaGenerator],
   },
   {
-    name: 'Math',
+    name: '数学类',
     components: [mathEvaluator, etaCalculator, percentageCalculator],
   },
   {
-    name: 'Measurement',
+    name: '测量',
     components: [chronometer, temperatureConverter, benchmarkBuilder],
   },
   {
-    name: 'Text',
+    name: '文本类',
     components: [loremIpsumGenerator, textStatistics, emojiPicker, stringObfuscator, textDiff],
   },
   {
-    name: 'Data',
+    name: '数据类',
     components: [phoneParserAndFormatter, ibanValidatorAndParser],
   },
 ];
