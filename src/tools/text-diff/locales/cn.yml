@@ -1,0 +1,4 @@
+tools:
+  text-diff:
+    title: "文本差异比较"
+    description: "比较两篇文本，看看它们之间的区别."

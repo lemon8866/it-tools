@@ -1,0 +1,4 @@
+tools:
+  slugify-string:
+    title: "Slugify string(格式化)"
+    description: "使字符串url、文件名和id安全。"

@@ -1,0 +1,4 @@
+tools:
+  html-entities:
+    title: "转义html实体"
+    description: "转义或取消转义html实体(将特殊符号url-encoder替换为其html版本)"

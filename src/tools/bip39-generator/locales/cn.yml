@@ -1,5 +1,7 @@
 tools:
   bip39-generator:
+    title: "BIP39口令生成器(助记词)"
+    description: "从现有或随机助记符生成BIP39密码短语，或从密码短语中获取助记符。"
     entropy-length-error: "熵长度应>=16，<=32，并且是4的倍数"
     entropy-format-error: "熵应为十六进制字符串"
     invalid-mnemonic: "无效的助记词"

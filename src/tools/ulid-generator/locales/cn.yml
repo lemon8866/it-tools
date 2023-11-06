@@ -1,4 +1,6 @@
 tools:
   uuid-generator:
+    title: "ULID 生成"
+    description: "生成随机的词汇排序唯一标识符（ULID）"
     quantity: "数量"
     uuidquantity: "生成数量"

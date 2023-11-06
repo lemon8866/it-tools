@@ -1,0 +1,4 @@
+tools:
+  temperature-converter:
+    title: "温度转换"
+    description: "开尔文、摄氏度、华氏度、兰金、Delisle、牛顿、Réaumur和Rømer的温度度转换。"

@@ -1,6 +1,8 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as numeronymGenerator } from './numeronym-generator';
+import { tool as macAddressGenerator } from './mac-address-generator';
 import { tool as textToBinary } from './text-to-binary';
 import { tool as ulidGenerator } from './ulid-generator';
 import { tool as ibanValidatorAndParser } from './iban-validator-and-parser';
@@ -75,11 +77,11 @@ import { tool as xmlFormatter } from './xml-formatter';
 
 export const toolsByCategory: ToolCategory[] = [
   {
-    name: '加密类',
+    name: 'Crypto',
     components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser],
   },
   {
-    name: '转换类',
+    name: 'Converter',
     components: [
       dateTimeConverter,
       baseConverter,
@@ -100,7 +102,7 @@ export const toolsByCategory: ToolCategory[] = [
     ],
   },
   {
-    name: '网页类',
+    name: 'Web',
     components: [
       urlEncoder,
       htmlEntities,
@@ -120,11 +122,11 @@ export const toolsByCategory: ToolCategory[] = [
     ],
   },
   {
-    name: '图片和视频',
+    name: 'Images and videos',
     components: [qrCodeGenerator, wifiQrCodeGenerator, svgPlaceholderGenerator, cameraRecorder],
   },
   {
-    name: '开发类',
+    name: 'Development',
     components: [
       gitMemo,
       randomPortGenerator,
@@ -139,23 +141,23 @@ export const toolsByCategory: ToolCategory[] = [
     ],
   },
   {
-    name: '网络',
-    components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, ipv6UlaGenerator],
+    name: 'Network',
+    components: [ipv4SubnetCalculator, ipv4AddressConverter, ipv4RangeExpander, macAddressLookup, macAddressGenerator, ipv6UlaGenerator],
   },
   {
-    name: '数学类',
+    name: 'Math',
     components: [mathEvaluator, etaCalculator, percentageCalculator],
   },
   {
-    name: '测量',
+    name: 'Measurement',
     components: [chronometer, temperatureConverter, benchmarkBuilder],
   },
   {
-    name: '文本类',
-    components: [loremIpsumGenerator, textStatistics, emojiPicker, stringObfuscator, textDiff],
+    name: 'Text',
+    components: [loremIpsumGenerator, textStatistics, emojiPicker, stringObfuscator, textDiff, numeronymGenerator],
   },
   {
-    name: '数据类',
+    name: 'Data',
     components: [phoneParserAndFormatter, ibanValidatorAndParser],
   },
 ];

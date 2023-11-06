@@ -1,5 +1,7 @@
 tools:
   hmac-generator:
+    title: "HMAC生成器"
+    description: "使用密钥和您喜欢的哈希函数计算基于哈希的消息身份验证码（HMAC）。"
     plaintext-placeholder: "用于计算哈希的文本"
     enter-secret: "请输入秘钥..."
     digest-encoding: "哈希算法"

@@ -1,5 +1,7 @@
 tools:
   encryption:
+    title: "加密/解密文本"
+    description: "使用AES、TripleDES、Rabbit或RC4等加密算法对文本明文进行加密和解密。"
     youtext: "文本"
     strcypher: "待加密的字符串"
     secretkey: "秘钥"

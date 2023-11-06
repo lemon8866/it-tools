@@ -1,0 +1,4 @@
+tools:
+  string-obfuscator:
+    title: "String 混淆工具(掩码)"
+    description: "混淆字符串（如机密、IBAN或令牌），使其可共享和可识别，而不会泄露其内容。"

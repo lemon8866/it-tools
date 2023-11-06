@@ -1,5 +1,7 @@
 tools:
   basic-auth-generator:
+    title: "Basic 认证生成"
+    description: "根据用户名和密码生成base64基本身份验证标头。"
     username: "用户名"
     password: "密码"
 

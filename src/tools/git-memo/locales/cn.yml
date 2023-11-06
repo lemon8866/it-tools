@@ -1,0 +1,4 @@
+tools:
+  git-memo:
+    title: "Git 备忘录"
+    description: "Git是一个去中心化的版本管理软件。有了这个备忘单，您将可以快速访问最常见的git命令。"

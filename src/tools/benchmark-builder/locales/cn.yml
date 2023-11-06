@@ -1,7 +1,9 @@
 tools:
   benchmark-builder:
     position: "位置"
-    title: "标题"
+    title: "基准生成器"
+    description: "使用这个非常简单的在线基准生成器可以轻松地比较任务的执行时间。"
+    tabletitle: "标题"
     size: "大小"
     mean: "平均值"
     variance: "方差"

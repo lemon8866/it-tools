@@ -1,0 +1,6 @@
+tools:
+  numeronym-generator:
+    internationalization: "输入一个单词，例如“国际化”"
+    numeronym: "数字符号：“”"
+    title: "数字生成器"
+    description: "数字是一个单词，其中一个数字用来形成缩写。例如，“i18n”是“国际化”的数字，其中18代表单词中第一个i和最后一个n之间的字母数。"

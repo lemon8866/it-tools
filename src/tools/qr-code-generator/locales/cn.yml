@@ -1,0 +1,4 @@
+tools:
+  qrcode-generator:
+    title: QR Code(二维码) 生成
+    description: "生成并下载url或仅文本的二维码，并自定义背景和前景颜色。"

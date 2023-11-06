@@ -1,0 +1,4 @@
+tools:
+  math-evaluator:
+    title: Math 求值(数学计算器)
+    description: 评估数学表达式，就像类固醇上的计算器（你可以使用函数，如sqrt，cos，sin，abs，…）

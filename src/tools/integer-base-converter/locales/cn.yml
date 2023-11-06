@@ -1,0 +1,4 @@
+tools:
+  base-converter:
+    title: "Integer base 转换"
+    description: "在不同的基数之间转换数字（十进制、十六进制、二进制、八进制、base64…）"

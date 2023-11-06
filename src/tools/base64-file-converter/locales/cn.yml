@@ -1,5 +1,7 @@
 tools:
   base64-file-converter:
+    title: "Base64文件转换"
+    description: "将字符串、文件或图像转换为它的base64表示形式。"
     invalid-message: "无效的Base64字符"
     base642file: "Base64转文件"
     file2base64: "文件转Base64"

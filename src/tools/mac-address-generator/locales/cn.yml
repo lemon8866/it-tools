@@ -1,0 +1,11 @@
+tools:
+  mac-address-generator:
+    uppercase: "大写"
+    lowercase: "小写"
+    none: "无"
+    quantity: "数量"
+    mac-address-prefix: "MAC前缀"
+    case: "大小写"
+    separator: "分隔符"
+    title: "Mac地址生成器"
+    description: "输入数量和前缀。MAC地址将以您选择的大小写（大写或小写）生成"

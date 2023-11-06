@@ -1,5 +1,7 @@
 tools:
   base64-string-converter:
+    title: "Base64字符串编码/解码"
+    description: "将字符串编码和解码为其base64表示。"
     invalid-message: "无效的Base64字符"
     base64: "Base64编码字符"
     stringtobase64: "字符串转Base64编码"

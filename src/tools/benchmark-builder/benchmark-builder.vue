@@ -52,7 +52,7 @@ const { copy } = useCopy({ createToast: true, text: t('tools.bcrypt.clipboard-co
 
 const header = {
   position: t('tools.benchmark-builder.position'),
-  title: t('tools.benchmark-builder.title'),
+  title: t('tools.benchmark-builder.tabletitle'),
   size: t('tools.benchmark-builder.size'),
   mean: t('tools.benchmark-builder.mean'),
   variance: t('tools.benchmark-builder.variance'),

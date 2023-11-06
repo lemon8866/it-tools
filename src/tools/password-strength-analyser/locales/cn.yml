@@ -1,5 +1,7 @@
 tools:
   password-strength-analyser:
+    title: "密码强度分析器"
+    description: "使用此仅限客户端的密码强度分析器和破解时间估计工具来发现您的密码强度。"
     force-crack: "使用暴力破解此密码的持续时间"
     note-text: "计算的强度是基于使用蛮力方法破解密码所需的时间，它没有考虑字典攻击的可能性。"
     passlength: "密码长度"
