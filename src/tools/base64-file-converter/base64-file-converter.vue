@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { Upload } from '@vicons/tabler';
 import { useBase64 } from '@vueuse/core';
-import type { UploadFileInfo } from 'naive-ui';
 import type { Ref } from 'vue';
 import { useCopy } from '@/composable/copy';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
@@ -33,15 +31,12 @@ function downloadFile() {
     //
   }
 }
-
-const fileList = ref();
 const fileInput = ref() as Ref<File>;
 const { base64: fileBase64 } = useBase64(fileInput);
 const { copy: copyFileBase64 } = useCopy({ source: fileBase64, text: t('common.clipboard.success') });
 
-async function onUpload({ file: { file } }: { file: UploadFileInfo }) {
+async function onUpload(file: File) {
   if (file) {
-    fileList.value = [];
     fileInput.value = file;
   }
 }
@@ -60,28 +55,18 @@ async function onUpload({ file: { file } }: { file: UploadFileInfo }) {
 
     <div flex justify-center>
       <c-button :disabled="base64Input === '' || !base64InputValidation.isValid" @click="downloadFile()">
-        {{ $t('common.operate.download') }}
+        {{ t('tools.base64-file-converter.downloadfile') }}
       </c-button>
     </div>
   </c-card>
 
-  <c-card :title="t('tools.base64-file-converter.file2base64')">
-    <n-upload v-model:file-list="fileList" :show-file-list="true" :on-before-upload="onUpload" list-type="image">
-      <n-upload-dragger>
-        <div mb-2>
-          <n-icon size="35" :depth="3" :component="Upload" />
-        </div>
-        <div op-60>
-          {{ $t('tools.base64-file-converter.filedrag') }}
-        </div>
-      </n-upload-dragger>
-    </n-upload>
-
-    <c-input-text :value="fileBase64" multiline readonly :placeholder="t('tools.base64-file-converter.base64')" rows="5" mb-2 />
+  <c-card :title="t('tools.base64-file-converter.filebase64')">
+    <c-file-upload :title="t('tools.base64-file-converter.filedrag')" @file-upload="onUpload" />
+    <c-input-text :value="fileBase64" multiline readonly :placeholder="t('tools.base64-file-converter.base64')" rows="5" my-2 />
 
     <div flex justify-center>
       <c-button @click="copyFileBase64()">
-        {{ $t('common.operate.copy') }}
+        {{ t('common.operate.copy') }}
       </c-button>
     </div>
   </c-card>

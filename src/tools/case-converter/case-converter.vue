@@ -23,11 +23,11 @@ const { t } = useI18n();
 const formats = computed(() => [
   {
     label: t('tools.case-converter.lowercase'),
-    value: noCase(input.value, baseConfig).toLocaleLowerCase(),
+    value: input.value.toLocaleLowerCase(),
   },
   {
     label: t('tools.case-converter.uppercase'),
-    value: noCase(input.value, baseConfig).toLocaleUpperCase(),
+    value: input.value.toLocaleUpperCase(),
   },
   {
     label: t('tools.case-converter.camelcase'),
@@ -72,6 +72,13 @@ const formats = computed(() => [
   {
     label: t('tools.case-converter.snakecase'),
     value: snakeCase(input.value, baseConfig),
+  },
+  {
+    label: t('tools.case-converter.Mockingcase'),
+    value: input.value
+      .split('')
+      .map((char, index) => (index % 2 === 0 ? char.toUpperCase() : char.toLowerCase()))
+      .join(''),
   },
 ]);
 

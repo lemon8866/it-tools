@@ -1,12 +1,12 @@
 import { Fingerprint } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'UUID v4 生成器',
+  name: translate('tools.uuid-generator.title'),
   path: '/uuid-generator',
-  description:
-    '通用唯一标识符（UUID）是一种用于在计算机系统中标识信息的128位数字。可能的UUID数量为16的32次方，即2的128次方，约为3.4x10^38（这个数目非常大！）。',
-  keywords: ['uuid', 'v4', 'random', 'id', 'alphanumeric', 'identity', 'token', 'string', 'identifier', 'unique'],
+  description: translate('tools.uuid-generator.description'),
+  keywords: ['uuid', 'v4', 'random', 'id', 'alphanumeric', 'identity', 'token', 'string', 'identifier', 'unique', 'v1', 'v3', 'v5', 'nil'],
   component: () => import('./uuid-generator.vue'),
   icon: Fingerprint,
 });

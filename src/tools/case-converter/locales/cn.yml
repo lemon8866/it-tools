@@ -15,3 +15,4 @@ tools:
     pathcase: "路径"
     sentencecase: "句子"
     snakecase: "下划线"
+    Mockingcase: "模型库"

@@ -1,0 +1,8 @@
+tools:
+  pdf-signature-checker:
+    title: "PDF 签名检查器"
+    description: "验证PDF文件的签名。签名的PDF文件包含一个或多个签名，这些签名可用于确定自文件签名以来文件的内容是否已更改。"
+    fileupload: "将PDF文件拖放到此处，或单击以选择文件"
+    errormsg: " 在提供的文件中找不到签名。"
+    Signature: "签名"
+    certificates: "证书"

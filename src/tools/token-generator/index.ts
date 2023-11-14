@@ -1,12 +1,12 @@
 import { ArrowsShuffle } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Token 生成器',
+  name: translate('tools.token-generator.title'),
   path: '/token-generator',
-  description:
-    '生成包含所需字符的随机字符串：大写或小写字母、数字和/或符号。',
-  keywords: ['token', 'random', 'string', 'alphanumeric', 'symbols', 'number', 'letters', 'lowercase', 'uppercase'],
+  description: translate('tools.token-generator.description'),
+  keywords: ['token', 'random', 'string', 'alphanumeric', 'symbols', 'number', 'letters', 'lowercase', 'uppercase', 'password'],
   component: () => import('./token-generator.tool.vue'),
   icon: ArrowsShuffle,
 });

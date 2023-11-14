@@ -8,4 +8,5 @@ tools:
     filebase64: "文件的Base64编码"
     filedrag: "拖拽文件到此"
     base64: "Base64编码字符"
+    downloadfile: "下载文件"
 

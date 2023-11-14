@@ -10,3 +10,8 @@ tools:
     copy: 复制
     refresh: 刷新
     length: 长度
+    uuidversion: UUID版本
+    quantity: 数量
+    invaliduuid: "无效的UUID"
+    namespace: "命名空间"
+    name: "名称"
