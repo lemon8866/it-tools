@@ -4,3 +4,4 @@ tools:
     description: "通用唯一标识符（UUID）是一种用于在计算机系统中标识信息的128位数字。可能的UUID数量为16的32次方，即2的128次方，约为3.4x10^38（这个数目非常大！）。"
     quantity: "数量"
     uuidquantity: "生成数量"
+    invaliduuid: "无效的UUID"

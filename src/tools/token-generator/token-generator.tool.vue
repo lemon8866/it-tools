@@ -67,10 +67,10 @@ const { copy } = useCopy({ source: token, text: t('tools.token-generator.copied'
 
       <div mt-5 flex justify-center gap-3>
         <c-button @click="copy()">
-          {{ t('tools.token-generator.button.copy') }}
+          {{ t('common.operate.copy') }}
         </c-button>
         <c-button @click="refreshToken">
-          {{ t('tools.token-generator.button.refresh') }}
+          {{ t('common.operate.refresh') }}
         </c-button>
       </div>
     </c-card>

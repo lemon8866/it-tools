@@ -41,10 +41,10 @@ const compareMatch = computed(() => compareSync(compareString.value, compareHash
   <c-card :title="t('tools.bcrypt.compare-string')">
     <n-form label-width="120">
       <n-form-item :label="t('tools.bcrypt.your-sting')" label-placement="left">
-        <c-input-text v-model:value="compareString" placeholder="Your string to compare..." raw-text />
+        <c-input-text v-model:value="compareString" placeholder="要比较的字符串..." raw-text />
       </n-form-item>
       <n-form-item :label="t('tools.bcrypt.your-hash')" label-placement="left">
-        <c-input-text v-model:value="compareHash" placeholder="Your hash to compare..." raw-text />
+        <c-input-text v-model:value="compareHash" placeholder="要比较的HASH..." raw-text />
       </n-form-item>
       <n-form-item :label="t('tools.bcrypt.do-match')" label-placement="left" :show-feedback="false">
         <div class="compare-result" :class="{ positive: compareMatch }">

@@ -40,7 +40,7 @@ const decryptOutput = computed(() =>
       :label="t('tools.encryption.textencrypted')"
       :value="cypherOutput"
       rows="3"
-      placeholder="Your string hash"
+      placeholder="您的字符串哈希"
       multiline monospace readonly autosize mt-5
     />
   </c-card>
@@ -49,7 +49,7 @@ const decryptOutput = computed(() =>
       <c-input-text
         v-model:value="decryptInput"
         :label="t('tools.encryption.encryptedtext')"
-        placeholder="The string to cypher"
+        placeholder="要加密的字符串"
         rows="4"
         multiline raw-text monospace autosize flex-1
       />
@@ -66,7 +66,7 @@ const decryptOutput = computed(() =>
     <c-input-text
       :label="t('tools.encryption.decryptedtext')"
       :value="decryptOutput"
-      placeholder="Your string hash"
+      placeholder="解密后的文本"
       rows="3"
       multiline monospace readonly autosize mt-5
     />

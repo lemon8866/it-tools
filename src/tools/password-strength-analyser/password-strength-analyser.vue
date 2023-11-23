@@ -29,7 +29,7 @@ const details = computed(() => [
     <c-input-text
       v-model:value="password"
       type="password"
-      placeholder="Enter a password..."
+      placeholder="输入一个密码..."
       clearable
       autofocus
       raw-text

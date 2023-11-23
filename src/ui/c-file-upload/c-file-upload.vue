@@ -82,13 +82,13 @@ function handleUpload(files: FileList | null | undefined) {
       <div my-4 w-full flex items-center justify-center op-70>
         <div class="h-1px max-w-100px flex-1 bg-gray-300 op-50" />
         <div class="mx-2 text-gray-400">
-          or
+          或
         </div>
         <div class="h-1px max-w-100px flex-1 bg-gray-300 op-50" />
       </div>
 
       <c-button>
-        Browse files
+        浏览文件
       </c-button>
     </slot>
   </div>
