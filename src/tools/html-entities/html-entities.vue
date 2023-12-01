@@ -5,7 +5,7 @@ import { useCopy } from '@/composable/copy';
 
 const escapeInput = ref('<title>IT Tool</title>');
 const escapeOutput = computed(() => escape(escapeInput.value));
-const { copy: copyEscaped } = useCopy({ source: escapeOutput, text: '复制成功'});
+const { copy: copyEscaped } = useCopy({ source: escapeOutput, text: '复制成功' });
 
 const unescapeInput = ref('&lt;title&gt;IT Tool&lt;/title&gt;');
 const unescapeOutput = computed(() => unescape(unescapeInput.value));

@@ -41,7 +41,7 @@ async function onVerifyClicked(uploadedFile: File) {
 
       <div v-if="status === 'error'">
         <c-alert mt-4>
-         {{ t('tools.pdf-signature-checker.errormsg') }}
+          {{ t('tools.pdf-signature-checker.errormsg') }}
         </c-alert>
       </div>
     </div>

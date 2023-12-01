@@ -48,7 +48,7 @@ const results = computed(() => {
     });
 });
 
-const { copy } = useCopy({ createToast: true, text: t('tools.bcrypt.clipboard-copy-success')});
+const { copy } = useCopy({ createToast: true, text: t('tools.bcrypt.clipboard-copy-success') });
 
 const header = {
   position: t('tools.benchmark-builder.position'),
@@ -100,7 +100,7 @@ function copyAsBulletList() {
         <div flex justify-center>
           <c-button v-if="suites.length > 1" variant="text" @click="suites.splice(index, 1)">
             <n-icon :component="Trash" depth="3" mr-2 size="18" />
-             {{ $t('tools.benchmark-builder.deletesuite') }}
+            {{ $t('tools.benchmark-builder.deletesuite') }}
           </c-button>
           <c-button
             variant="text"
@@ -127,7 +127,7 @@ function copyAsBulletList() {
             ]
           "
         >
-        {{ $t('tools.benchmark-builder.resetsuite') }}
+          {{ $t('tools.benchmark-builder.resetsuite') }}
         </c-button>
       </div>
 

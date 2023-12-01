@@ -8,7 +8,7 @@ const keepLast = ref(4);
 const keepSpace = ref(true);
 
 const obfuscatedString = useObfuscateString(str, { keepFirst, keepLast, keepSpace });
-const { copy } = useCopy({ source: obfuscatedString, text: '复制成功'});
+const { copy } = useCopy({ source: obfuscatedString, text: '复制成功' });
 </script>
 
 <template>

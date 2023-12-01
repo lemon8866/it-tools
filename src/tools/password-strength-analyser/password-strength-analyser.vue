@@ -56,7 +56,7 @@ const details = computed(() => [
     </c-card>
     <div op-70>
       <span font-bold>{{ $t('common.noun.note') }}: </span>
-        {{ $t('tools.password-strength-analyser.note-text') }}
+      {{ $t('tools.password-strength-analyser.note-text') }}
     </div>
   </div>
 </template>

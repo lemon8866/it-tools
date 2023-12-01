@@ -50,7 +50,7 @@ const { copy } = useCopy({ source: uuids, text: t('common.clipboard.success') })
     <c-buttons-select v-model:value="version" :options="versions" :label="t('tools.token-generator.uuidversion')" label-width="100px" mb-2 />
 
     <div mb-2 flex items-center>
-      <span w-100px>{{ t('tools.token-generator.quantity')}} </span>
+      <span w-100px>{{ t('tools.token-generator.quantity') }} </span>
       <n-input-number v-model:value="count" flex-1 :min="1" :max="50" :placeholder="t('tools.token-generator.quantity')" />
     </div>
 
