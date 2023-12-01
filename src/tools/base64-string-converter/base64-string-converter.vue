@@ -39,7 +39,7 @@ const b64ValidationWatch = [decodeUrlSafe];
     />
 
     <c-input-text
-      :label="t('tools.base64-string-converter.base64tostring')"
+      :label="t('tools.base64-string-converter.base64')"
       :value="base64Output"
       multiline
       readonly

@@ -9,6 +9,6 @@ tools:
     enurlsafe: "URL编码"
     deurlsafe: "URL解码"
     base64decode: "Base64字符串解码"
-    decode: "字符串解码"
+    decode: "解码后的字符串"
     decoded: "解码结果"
 

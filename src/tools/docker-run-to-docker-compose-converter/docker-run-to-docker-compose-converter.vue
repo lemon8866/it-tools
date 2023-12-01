@@ -63,7 +63,7 @@ const { download } = useDownloadFileFromBase64({ source: dockerComposeBase64, fi
 
     <div v-if="notImplemented.length > 0">
       <n-alert
-        title="此选项尚未实现，因此尚未转换为docker compose"
+        title="有选项尚未实现，因此尚未转换为docker compose"
         type="warning"
         mt-5
       >

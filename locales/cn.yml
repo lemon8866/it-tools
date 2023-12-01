@@ -1,62 +1,68 @@
 home:
   categories:
-    newestTools: '最新工具'
-    favoriteTools: '你最喜欢的工具'
+    newestTools: 最新工具
+    favoriteTools: '您最喜欢的工具'
     allTools: '所有工具'
-  subtitle: '开发人员的方便工具'
+  subtitle: '为开发者提供方便的工具'
   toggleMenu: '切换菜单'
-  home: 家
-  uiLib: 'UI库'
+  home: 主页
+  uiLib: 'UI 库'
+  support: '支持IT工具开发'
   buyMeACoffee: '给我买杯咖啡'
   follow:
-    title: '你喜欢它的工具?'
+    title: '你喜欢it-tools?'
     p1: '给我们一颗星'
-    githubRepository: 'IT工具GitHub存储库'
-    p2: '或者继续关注我们'
-    twitterAccount: 'IT工具推特帐户'
-    thankYou: '谢谢!'
+    githubRepository: 'IT 工具 GitHub 存储库'
+    p2: '或关注我们'
+    twitterAccount: 'IT-工具 Twitter 帐户'
+    thankYou: '谢谢 ！'
   nav:
-    github: 'GitHub存储库'
-    githubRepository: 'IT工具GitHub存储库'
-    twitter: 'Twitter帐户'
-    twitterAccount: 'IT工具推特帐户'
-    about: '关于IT工具'
+    github: 'GitHub 存储库'
+    githubRepository: 'IT 工具 GitHub 存储库'
+    twitter: '推特账户'
+    twitterAccount: 'IT 工具 Twitter 帐户'
+    about: '关于 IT 工具'
     aboutLabel: '关于'
     darkMode: '深色模式'
     lightMode: '浅色模式'
-    mode: '切换暗/亮模式'
+    mode: '切换深色/浅色模式'
 about:
-  h1: '关于IT工具'
-  h1p1: '这个很棒的网站，由❤ 通过'
-  h1p2: "，为开发人员和IT工作人员聚合了有用的工具。如果您觉得它有用，请随时将其分享给您认为可能也有用的人，别忘了在快捷栏中添加书签！"
-  h1p3: 'IT Tools是开源的（根据麻省理工学院的许可）和免费的，而且永远都是，但托管和续订域名需要我花钱。如果你想支持我的工作，并鼓励我添加更多工具，请考虑通过'
-  h1p4: '赞助我'
-  h2: 技术
-  h2p1: 'IT工具是用Vue.js（Vue3）和Naive UI组件库制作的，由Vercel托管并持续部署。一些工具中使用了第三方开源库，您可以在'
-  h2p2: '存储库的文件.'
-  h3: '发现bug了吗？工具不见了？'
-  h3p1: '如果您需要一个当前不存在的工具，并且您认为它可能有用，欢迎您在'
-  h3p2: '问题部分'
-  h3p3: '在GitHub存储库中。'
-  h3p4: "如果你发现了一个错误，或者某些东西没有按预期工作，请在"
-  h3p5: '问题部分'
-  h3p6: '在GitHub存储库中。'
+  content: >
+    # 关于 IT 工具
+
+    这个精彩的网站由 [Corentin Thomasset](https://github.com/CorentinTh) 用 ❤ 制作，为开发人员和 IT 工作人员聚集了有用的工具。 如果您发现它有用，请随时将其分享给您认为可能也有用的人，并且不要忘记在快捷栏中将其添加为书签！
+
+    IT Tools 是开源的（根据 MIT 许可证）并且免费，而且永远都是免费的，但托管和续订域名需要我花钱。 如果您想支持我的工作，并鼓励我添加更多工具，请考虑通过[赞助我](https://www.buymeacoffee.com/cthmsst)来支持。
+
+    ## 技术
+
+    IT Tools 采用 Vue.js (Vue 3) 和 Naive UI 组件库制作，由 Vercel 托管和持续部署。 一些工具使用了第三方开源库，您可以在 [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) 文件中找到完整列表 存储库的。
+
+    ## 发现错误？ 缺少一个工具？
+
+    如果您需要的工具目前此处没有，并且您认为可能有用，欢迎您在[问题部分](https://github.com/CorentinTh/it-tools/issues/ 新/选择）在 GitHub 存储库中。
+
+    如果您发现错误或某些内容未按预期工作，请在 [问题部分](https://github.com/CorentinTh/it-tools/issues/new/choose) 中提交错误报告 GitHub 存储库。
+
 404:
-  notFound: '404未找到'
-  sorry: '抱歉，此页面似乎不存在'
+  notFound: '404 未找到'
+  sorry: '抱歉，该页面似乎不存在'
   maybe: '也许缓存正在做一些棘手的事情，尝试强制刷新？'
-  backHome: '回家'
+  backHome: '回到主页'
+favoriteButton:
+  remove: '从收藏夹中删除'
+  add: '添加到收藏夹'
 toolCard:
-  new: 新的
+  new: 最新
 search:
   label: 搜索
 tools:
   categories:
-    favorite-tools: '你最喜欢的工具'
-    crypto: 加密
+    favorite-tools: '您最喜欢的工具'
+    crypto: 加解密
     converter: 转换
-    web: web
-    images and videos: '图片和视频'
+    web: Web
+    images and videos: '图片 & 视频'
     development: 开发
     network: 网络
     math: 数学

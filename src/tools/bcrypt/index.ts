@@ -6,7 +6,7 @@ export const tool = defineTool({
   path: '/bcrypt',
   description:
     '使用bcrypt对文本字符串进行哈希和比较。Bcrypt是一个基于Blowfish密码的密码哈希函数。',
-  keywords: ['bcrypt', 'hash', 'compare', 'password', 'salt', 'round', 'storage', 'crypto'],
+  keywords: ['bcrypt', 'hash', '比较', '密码', 'salt', 'round', 'storage', 'crypto'],
   component: () => import('./bcrypt.vue'),
   icon: LockSquare,
 });
