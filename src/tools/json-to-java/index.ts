@@ -1,4 +1,4 @@
-import { ArrowsShuffle } from '@vicons/tabler';
+import { Braces } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
