@@ -1,0 +1,7 @@
+tools:
+  json-to-go:
+    title: JSON 转 Go
+    description: 将JSON转换为Go结构
+    definitions: 内联类型定义
+    omitempty: 省略空的
+    example: 样例
