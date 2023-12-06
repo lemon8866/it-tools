@@ -1,0 +1,8 @@
+tools:
+  json-to-java:
+    title: JSON to Java Po
+    description: Convert JSON into Java entities
+    classzzname: classname
+    classzzplaceholder: Custom class name
+    jsonplaceholder: Enter JSON string
+    jsonresult: "Java entity string"

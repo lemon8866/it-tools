@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as jsonToJava } from './json-to-java';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -99,6 +100,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonToYaml,
       jsonToToml,
       jsonToGo,
+      jsonToJava,
       listConverter,
       tomlToJson,
       tomlToYaml,

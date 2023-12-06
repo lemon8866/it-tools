@@ -1,0 +1,8 @@
+tools:
+  json-to-java:
+    title: JSON 转 Java实体
+    description: 将JSON转换Java实体
+    classzzname: 类名
+    classzzplaceholder: 自定义类名
+    jsonplaceholder: 输入JSON字符串
+    jsonresult: "Java实体字符串"
