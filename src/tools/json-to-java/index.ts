@@ -7,6 +7,6 @@ export const tool = defineTool({
   description: '',
   keywords: ['json', 'to', 'java'],
   component: () => import('./json-to-java.vue'),
-  icon: ArrowsShuffle,
+  icon: Braces,
   createdAt: new Date('2023-12-06'),
 });
