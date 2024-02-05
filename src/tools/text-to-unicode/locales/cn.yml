@@ -1,0 +1,4 @@
+tools:
+  text-to-unicode:
+    title: 文本 到 Unicode
+    description: 分析文本并将其转换为unicode，反之亦然

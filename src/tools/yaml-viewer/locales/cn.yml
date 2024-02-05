@@ -1,0 +1,4 @@
+tools:
+  yaml-prettify:
+    title: YAML 美化和格式化
+    description: 将您的YAML字符串美化为人性化的可读格式。
