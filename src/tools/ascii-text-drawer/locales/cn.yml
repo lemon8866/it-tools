@@ -1,0 +1,14 @@
+tools:
+  ascii-text-drawer:
+    title: 'ASCII艺术文本生成器'
+    description: '创建具有多种字体和样式的ASCII艺术文本。'
+    youtext: '您的文本'
+    youdraw: "ni"
+    font: '字体'
+    width: '宽度'
+    widthtext: '文本宽度'
+    selectfont: '选择要使用的字体'
+    loadfont: '加载字体中...'
+    error: '当前设置导致错误。'
+    airtext: 'Ascii艺术文本'
+

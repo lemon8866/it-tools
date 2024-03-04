@@ -35,7 +35,7 @@ const { value, language, followHeightOf, copyPlacement, copyMessage } = toRefs(p
 const { height } = followHeightOf.value ? useElementSize(followHeightOf) : { height: ref(null) };
 
 const { copy, isJustCopied } = useCopy({ source: value, createToast: false });
-const tooltipText = computed(() => isJustCopied.value ? 'Copied!' : copyMessage.value);
+const tooltipText = computed(() => isJustCopied.value ? '已复制!' : copyMessage.value);
 </script>
 
 <template>
@@ -58,7 +58,7 @@ const tooltipText = computed(() => isJustCopied.value ? 'Copied!' : copyMessage.
         </c-tooltip>
       </div>
     </c-card>
-    <div v-if="copyPlacement === 'outside'" mt-4 flex justify-center>
+    <div v-if="copyPlacement === 'outside'" mt-4 mb-4 flex justify-center>
       <c-button @click="copy()">
         {{ tooltipText }}
       </c-button>
