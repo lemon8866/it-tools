@@ -38,7 +38,7 @@ const { download } = useDownloadFileFromBase64({ source: base64 });
         <n-form-item label="宽度 (in px)" flex-1>
           <n-input-number v-model:value="width" placeholder="SVG width..." min="1" />
         </n-form-item>
-        <n-form-item label="北京" flex-1>
+        <n-form-item label="背景" flex-1>
           <n-color-picker v-model:value="bgColor" :modes="['hex']" />
         </n-form-item>
       </div>
