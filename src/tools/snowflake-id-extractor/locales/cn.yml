@@ -1,0 +1,4 @@
+tools:
+  snowflake-id-extractor:
+    title: "雪花算法ID解析"
+    description: "从雪花ID中提取时间戳、机器ID和序列号"

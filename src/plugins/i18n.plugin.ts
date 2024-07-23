@@ -23,7 +23,7 @@ const i18n = createI18n({
   locale: 'cn',
   messages,
 });
-
+// i18n.global.locale.value = 'cn';
 export const i18nPlugin: Plugin = {
   install: (app) => {
     app.use(i18n);

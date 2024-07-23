@@ -1,0 +1,4 @@
+tools:
+  qr-code-decoder:
+    title: "二维码解码"
+    description: "二维码解码"

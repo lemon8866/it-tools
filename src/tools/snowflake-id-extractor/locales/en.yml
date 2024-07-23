@@ -1,0 +1,4 @@
+tools:
+  snowflake-id-extractor:
+    title: "Snowflake ID Extractor"
+    description: "Extract timestamp, machine ID, and sequence number from a Snowflake ID"
