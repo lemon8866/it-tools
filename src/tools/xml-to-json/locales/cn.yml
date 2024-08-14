@@ -1,0 +1,5 @@
+tools:
+  xml-to-json:
+    title: 'XML 转换 JSON'
+    description: '将XML转换为JSON'
+
