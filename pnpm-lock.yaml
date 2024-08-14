@@ -179,6 +179,9 @@ importers:
       xml-formatter:
         specifier: ^3.3.2
         version: 3.3.2
+      xml-js:
+        specifier: ^1.6.11
+        version: 1.6.11
       yaml:
         specifier: ^2.2.1
         version: 2.2.1
@@ -2174,8 +2177,8 @@ packages:
   '@vueuse/shared@10.0.0':
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
 
-  '@vueuse/shared@10.11.0':
-    resolution: {integrity: sha512-fyNoIXEq3PfX1L3NkNhtVQUSRtqYwJtJg+Bp9rIzculIZWHTkKSysujrOk2J+NrRulLTQH9+3gGSfYLWSEWU1A==}
+  '@vueuse/shared@10.11.1':
+    resolution: {integrity: sha512-LHpC8711VFZlDaYUXEBbFBCQ7GS3dVU9mjOhhMhXP6txTV4EhYQg/KGnQuvt/sPAtoUKq7VVUnL6mVtFoL42sA==}
 
   '@vueuse/shared@10.3.0':
     resolution: {integrity: sha512-kGqCTEuFPMK4+fNWy6dUOiYmxGcUbtznMwBZLC1PubidF4VZY05B+Oht7Jh7/6x4VOWGpvu3R37WHi81cKpiqg==}
@@ -5216,6 +5219,10 @@ packages:
     resolution: {integrity: sha512-ld34F1b7+2UQGNkfsAV4MN3/b7cdUstyMj3XJhzKFasOPtMToVCkqmrNcmrRuSlPxgH1K9tXPkqr75gAT3ix2g==}
     engines: {node: '>= 14'}
 
+  xml-js@1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
+    hasBin: true
+
   xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
@@ -7258,7 +7265,7 @@ snapshots:
     dependencies:
       '@unhead/dom': 0.5.1
       '@unhead/schema': 0.5.1
-      '@vueuse/shared': 10.11.0(vue@3.3.4)
+      '@vueuse/shared': 10.11.1(vue@3.3.4)
       unhead: 0.5.1
       vue: 3.3.4
     transitivePeerDependencies:
@@ -7716,7 +7723,7 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@vueuse/shared@10.11.0(vue@3.3.4)':
+  '@vueuse/shared@10.11.1(vue@3.3.4)':
     dependencies:
       vue-demi: 0.14.8(vue@3.3.4)
     transitivePeerDependencies:
@@ -10174,8 +10181,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sax@1.2.4:
-    optional: true
+  sax@1.2.4: {}
 
   saxes@6.0.0:
     dependencies:
@@ -11141,6 +11147,10 @@ snapshots:
   xml-formatter@3.3.2:
     dependencies:
       xml-parser-xo: 4.0.5
+
+  xml-js@1.6.11:
+    dependencies:
+      sax: 1.2.4
 
   xml-name-validator@4.0.0: {}
 

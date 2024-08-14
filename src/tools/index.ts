@@ -1,6 +1,8 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as jsonToXml } from './json-to-xml';
+import { tool as xmlToJson } from './xml-to-json';
 import { tool as qrCodeDecoder } from './qr-code-decoder';
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as jsonToJava } from './json-to-java';
@@ -110,6 +112,8 @@ export const toolsByCategory: ToolCategory[] = [
       listConverter,
       tomlToJson,
       tomlToYaml,
+      xmlToJson,
+      jsonToXml,
     ],
   },
   {
